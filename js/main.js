@@ -31,19 +31,19 @@ var writeBerryInfo = function (berry) {
     document.write('<dd>' + berry.growsOnShrub + '</dd>');
     
     document.write('<dt>Energy</dt>');
-    document.write('<dd>' + berry.energy + '</dd>');
+    document.write('<dd>' + berry.energy + ' kJ</dd>');
     
     document.write('<dt>Carbohydrates</dt>');
-    document.write('<dd>' + berry.carbohydrates + '</dd>');
+    document.write('<dd>' + berry.carbohydrates + ' g</dd>');
     
     document.write('<dt>Protein</dt>');
-    document.write('<dd>' + berry.protein + '</dd>');
+    document.write('<dd>' + berry.protein + ' g</dd>');
         
     document.write ('<dl>');
     
     
 };
 
-writeBerryInfo(blueberries);
-writeBerryInfo(grapes);
-writeBerryInfo(redCurrant);
+var allTheBerries = [blueberries, grapes, redCurrant];
+
+allTheBerries.forEach(writeBerryInfo);
